@@ -7,7 +7,7 @@ class RealImaginary
 		this.imaginary = imaginary;
 		if ((this.real == 0) && ((this.imaginary > 0) || (this.imaginary < 0)))
         {
-			r_i = `${(this.imaginary==-1)?"-":((this.imaginary==1)?"":this.imaginary)}i`
+			r_i = `${(this.imaginary<0)?"-":((this.imaginary==-1)?"":this.imaginary)}i`
 		} else if ((this.real > 0) && ((this.imaginary > 0) || (this.imaginary < 0)))
 		{
 			r_i = `${this.real} + ${(this.imaginary==1)?"":this.imaginary}i`
@@ -30,4 +30,12 @@ RealImaginary.sqrt = function(n)
 	{
 		return new RealImaginary(0,Math.sqrt(-n))
 	}
+}
+RealImaginary.add = function(a,b)
+{
+	return new RealImaginary(a.real + b.real, a.imaginary + b.imaginary)
+}
+RealImaginary.sub = function(a,b)
+{
+	return new RealImaginary(a.real - b.real, a.imaginary - b.imaginary)
 }
