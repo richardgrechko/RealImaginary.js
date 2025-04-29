@@ -18,7 +18,7 @@ class RealImaginary
 		{
 			r_i = real;
 		}
-		return [r_i, { real: real, imaginary: imaginary }]
+		return { real: real, imaginary: imaginary }
 	}
 }
 RealImaginary.sqrt = function(n)
