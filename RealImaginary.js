@@ -6,8 +6,8 @@ class RealImaginary
 		this.real = real;
 		this.imaginary = imaginary;
 		if ((this.real == 0) && ((this.imaginary > 0) || (this.imaginary < 0)))
-        {
-			r_i = `${(this.imaginary<0)?"-":((this.imaginary==-1)?"":this.imaginary)}i`
+		{
+			r_i = `${(this.imaginary==-1)?"-":(this.imaginary==1)?"":this.imaginary}i`
 		} else if ((this.real > 0) && ((this.imaginary > 0) || (this.imaginary < 0)))
 		{
 			r_i = `${this.real} + ${(this.imaginary==1)?"":this.imaginary}i`
